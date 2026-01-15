@@ -110,10 +110,10 @@ div.sphinxsidebar input {
 
 
 /* render negative nets with an overline */
-.literal.netn {
+.literal.net .net-neg {
     position: relative;
 }
-.literal.netn:after {
+.literal.net .net-neg:after {
     content: '';
     display: inline-block;
     box-sizing: content-box;
