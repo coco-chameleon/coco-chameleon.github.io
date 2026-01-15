@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Sam Hanes <sam@maltera.com>
+# SPDX-License-Identifier: CC-BY-SA-4.0
+
+/build/
+/.venv/
+__pycache__/

@@ -1,0 +1,125 @@
+/* SPDX-FileCopyrightText: 2026 Sam Hanes <sam@maltera.com>
+ * SPDX-License-Identifier: CC-BY-SA-4.0
+ */
+
+:root {
+    /* CoCo 1 & 2 palette, taken from
+     *   https://github.com/hoglet67/RGBtoHDMI/blob/20240213_e630d36f/src/osd.c#L3279
+     */
+    --coco-black: rgb(29, 29, 29);
+    --coco-white: rgb(205, 210, 224);
+    --coco-red: rgb(254, 0, 0);
+    --coco-blue: rgb(1, 74, 253);
+    --coco-magenta: rgb(241, 67, 194);
+    --coco-yellow: rgb(216, 254, 0);
+    --coco-cyan: rgb(57, 180, 216);
+    --coco-dk-green: rgb(1, 66, 1);
+    --coco-green: rgb(1, 254, 1);
+    --coco-dk-orange: rgb(74, 22, 1);
+    --coco-orange: rgb(248, 105, 19);
+    --coco-lt-orange: rgb(254, 182, 1);
+
+    --coco-black-lt10: color-mix(in oklab, var(--coco-black), white 10%);
+    --coco-black-lt20: color-mix(in oklab, var(--coco-black), white 20%);
+
+    --coco-white-dk: color-mix(in oklab, var(--coco-white), black 30%);
+    --coco-green-dk: color-mix(in oklab, var(--coco-green), black 30%);
+    --coco-green-lt: color-mix(in oklab, var(--coco-green), white 30%);
+}
+
+body {
+    background: var(--coco-black);
+    color: var(--coco-white);
+
+    margin: 0;
+    padding: 0;
+
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    line-height: 1.4;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2, h3, h4, h5, h6 {
+    margin: 0;
+    margin-top: 0.8lh;
+}
+
+p, ul, ol, dl {
+    margin: 0;
+    margin-top: 0.2lh;
+    margin-bottom: 0.5lh;
+}
+
+p {
+    max-width: 75ex;
+}
+
+a {
+    color: var(--coco-green);
+}
+
+a:active {
+    color: var(--coco-green-lt);
+}
+
+a:visited {
+    color: var(--coco-green-dk);
+}
+
+a.headerlink {
+    margin-left: 1ex;
+    text-decoration: none;
+}
+
+code, tt {
+    font-family: "Roboto Mono", monospace;
+}
+
+.document {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+div.sphinxsidebar {
+    width: 45ex;
+    margin: 0;
+    padding: 1ex;
+    padding-right: 2ex;
+}
+
+.documentwrapper {
+    flex: 1;
+}
+
+#searchlabel {
+    display: none;
+}
+
+div.sphinxsidebar input {
+    background: var(--coco-black-lt10);
+    border: 1px solid var(--coco-black-lt20);
+    border-radius: 0.25em;
+}
+
+
+/* render negative nets with an overline */
+.literal.netn {
+    position: relative;
+}
+.literal.netn:after {
+    content: '';
+    display: inline-block;
+    box-sizing: content-box;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0.1lh;
+    border-top: 0.1em solid currentColor;
+}
