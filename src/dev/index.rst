@@ -6,5 +6,6 @@ Developer Documentation
 
 .. toctree::
    :maxdepth: 1
-   
+
    cartridge
+   power_supply

@@ -57,6 +57,16 @@ p, ul, ol, dl {
     margin-bottom: 0.5lh;
 }
 
+ul, ol {
+    padding: 0;
+    padding-left: 4ex;
+}
+
+li > ul, li > ol {
+    margin: 0;
+    padding-left: 2ex;
+}
+
 p {
     max-width: 75ex;
 }
